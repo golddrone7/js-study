@@ -13,12 +13,12 @@ var num = 2;
 console.log(2 ** 3);
 
 // 증감 연산자
-var x = 3;
-x++;
-++x;
-x--;
---x;
-console.log(`x: ${x}`);
+var leftNum = 3;
+leftNum++;
+++leftNum;
+leftNum--;
+--leftNum;
+console.log(`x: ${leftNum}`);
 
 // 전위 연산, 후위 연산
 var n1 = 10;
@@ -30,4 +30,4 @@ var n3 = 10;
 var n4 = ++n3;
 console.log(`n3: ${n3}, n4: ${n4}`);
 
-x += 3; // x = x+3;
+leftNum += 3; // x = x+3;
