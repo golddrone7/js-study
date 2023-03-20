@@ -43,9 +43,9 @@ console.log(slicedFoods3);
 // reverse() : 배열 역순으로 배치, 원본이 변함
 console.log('=========================');
 
-var nums = [10, 20, 30, 40, 50];
+var array = [10, 20, 30, 40, 50];
 
-var copyNums = nums.slice();
+var copyNums = array.slice();
 
 copyNums.reverse();
 

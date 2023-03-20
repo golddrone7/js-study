@@ -40,18 +40,19 @@ console.log(slicedFood3);
 // reverse() : 배열 역순으로 배치, 원본이 변함
 console.log('======================');
 
-var nums = [10, 20, 30, 40, 50];
+var array = [10, 20, 30, 40, 50];
 
-var copyNums = nums.slice();
+var copyNums = array.slice();
 copyNums.reverse();
 console.log(copyNums);
 
+for(var i=0; i<array.length/2; i++){
+    var t = array[i];
+    array[i] = array[array.length-1];
+    array[array.length-1] = array[i];
+}
 
-// for(var i=0; i<nums.length/2; i++){
-//     var t = nums[i];
-//     nums[i] = nums[nums.length-1];
-//     nums[nums.length-1] = nums[i];
-// }
+
 
 // concat() : 배열 2개를 연결
 console.log('============================');
