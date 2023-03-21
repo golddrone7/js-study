@@ -30,6 +30,9 @@ const userList = [
     },
 ];
 
+
+
+
 // 회원목록에서 회원정보를 출력하는 함수
 function alertUserInfo(wannaSay){
     for(const user of userList){
