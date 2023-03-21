@@ -167,3 +167,15 @@ userList  // [{5},{5},{5},{5}]
 
 
 // console.log(mappedUsers);
+
+userList  // [{5},{5},{5},{5}]
+    .filter(user=>user.address==='서울') // [{5},{5},{5}]
+        .map(user=>({
+            firstHobby : user.hobbys[0],
+            name : user.userName
+        })) // [{2},{2},{2}]
+        .forEach(info => {
+            console.log(`${info.name}회원의 첫번째 취미는 ${info.firstHobby}입니다.`);
+        });
+
+
