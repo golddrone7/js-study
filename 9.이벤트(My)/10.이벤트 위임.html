@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="fruits">
+        <li id="apple" class="active">Apple</li>
+        <li></li>
+        <li></li>
+    </div>
+
+
+    <script>
+
+        const $fruits = document.querySelector('#fruits');
+
+        // 태그에서 클래스 active를 제거하는 함수
+        const removeActive = () => {
+            [...$fruits.children].forEach($li => {
+                if($li.classList.contains('active')){
+                    $li.classList.remove('active');
+                    return;
+                }
+            });
+        };
+
+        $fruits.onClick = e =>{
+            // 이벤트 타겟 제한 매우 중요
+            console.log(e.target.matches('li'));
+            if(!e.target.matches('#fruits li')){
+                return; // 제한을 둬서 버블링을 막아준다!
+            } 
+
+            // console.log('클릭이벤트 발생!');
+            // console.log(e.target);
+
+            // 1.기존의 active가 붙은 태그에서 active 제거
+            removeActive();
+            // 2. 클릭대상(e.target)에 클래스 active를 부여하고
+            e.target.classList.add('active');
+            // 3. 그 텍스트를 em.msg태그에 복사한다
+            const $msg = document.querySelector('.msg');
+            $msg.textContent = 
+        };
+
+    </script>
+
+</body>
+</html>

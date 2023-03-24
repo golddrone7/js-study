@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p>아무곳이나 클릭하세요!</p>
+    <em class="msg"></em>
+
+    <hr><hr><hr>
+
+    <input type="text" id="text">  
+    <p class="show"></p>
+
+
+
+    <script>
+        //이벤트 정보를 메롱에 쏴줌
+        // event, e의 줄임말 다양한 정보가 있음
+        document.onclick = function({x, y}){
+
+            // const { x, y} = e;
+
+            // console.log(`x: ${e.x}, y: ${e.y}`);
+            const $em = document.querySelector('.msg');
+            // $em.textContent = `x: ${e.x}, y: ${e.y}`;
+            $em.textContent = `x: ${x}, y: ${y}`;
+
+
+        };
+        // 프로그램 개발할땐 단위테스트가 중요함
+        // 로그를 찍으면서 확인해보자
+        const $textInput = document.querySelector('[type=text]');
+        // console.log($textInput);
+
+        $textInput.addEventListener('keyup', e => {
+            // console.log(e);
+
+            const $show =document.querySelector('.show');
+            // if(e.key === 'Enter'){
+                $show.textContent = $textInput.value;
+                // $textInput.value = '';
+            // }
+
+
+        });
+
+    </script>
+
+</body>
+</html>

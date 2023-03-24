@@ -19,3 +19,5 @@ function calcNumbersTotalAndAverage(...numbers) {
 */
 var result = calcNumbersTotalAndAverage(90, 80, 100, 90); //360과 90이 리턴되어야 함!
 console.log(`총합: ${result.total}, 평균: ${result.avg}`);
+
+
