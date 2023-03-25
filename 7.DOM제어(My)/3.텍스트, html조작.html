@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #greet span{
+            color: red;
+        }
+        #greet::before {
+            /* content: "'what's up"; */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="greet">
+        Hello <span>World!</span>
+    </div>
+
+    <script>
+        const $greet = document.getElementById('greet');
+        console.log($greet.textContent);
+
+        // 문제가 될수 있는 상황, span 태그가 사라짐
+        // $greet.textContent = '안녕하세요!';
+        $greet.innerHTML = '<span>안녕</span>하세요!';
+        // 텍스트를 제어할 때는 인라인 속성으로 제어
+        // 블록 요소안에 텍스트를 넣을때는 인라인 요소로 넣는게 개발하기 좋음
+
+        // 모든 자식 태그를 삭제 
+        // $greet.innerHTML = '' ; // 전체 삭제, 일정관리
+
+        // 자식 태그를 추가
+        $greet.innerHTML += '<span>메롱메롱</span>';
+
+
+    </script>
+</body>
+</html>
