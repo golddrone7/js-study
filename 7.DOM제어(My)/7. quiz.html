@@ -40,15 +40,17 @@
         $list.appendChild($newli);
     
         //4. id="list"인 요소의 첫 위치에 새요소 "<li>list_1</li>"를 추가하세요.
-        $newli.textContent = 'list_1';
-        $list.insertBefore($newli, $list.firstChild);
+        const $newli2 = document.createElement('li');
+        $newli2.textContent = 'list_1';
+        $list.insertBefore($newli2, $list.firstChild);
 
-
-    
         //5. id="list"인 요소의 하위 <li>요소중 첫번째 요소 삭제
-    
+        $list.removeChild($list.firstChild);
         //6. ul의 자식 노드를 전부 삭제하세요.
         
+        [...$list.children].forEach(element =>  $list.removeChild(element));
+        
+        // $list.innerHTML= "";
     </script>
 
 </body>
